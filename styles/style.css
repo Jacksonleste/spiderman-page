@@ -57,7 +57,7 @@ header img{
 
 #head{
     display: flex;
-    background: url("/media/new\ york\ hq4.png");
+    background: url("https://github.com/Jacksonleste/spiderman-page/blob/main/media/new%20york%20hq4.png?raw=true");
     background-size: cover;
     background-repeat: no-repeat;
     height: 95vh;
