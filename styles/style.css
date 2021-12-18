@@ -1,0 +1,94 @@
+:root{
+    --vermelho-principal: #BF1736;
+    --laranja: #D92B2B;
+    --azul-principal: #244673;
+    --azul-claro: #3088BF;
+    --preto: #0D0D0D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    background-color: #244673d3;
+    /* opacity: 50%; */
+    align-items: center;
+    height: 6rem;
+    width: 100vw;
+}
+
+header img{
+    height: 6rem;
+}
+
+#header-links{
+    list-style: none;
+    display: flex;
+    font-size: 2.5rem;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+
+    color: white;
+    /* background-color: aqua; */
+
+    
+    min-width: 40rem;
+    
+    width: 40vw;
+}
+
+/* main{
+    padding-top: 6rem;
+} */
+
+#head{
+    display: flex;
+    background: url("/media/new\ york\ hq4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 95vh;
+    width: 100vw;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#image-head{
+    /* height: 100vh;  */
+    height: 50vw;
+    object-fit: contain;
+
+}
+
+#citacao{
+    padding-left: 5rem;
+    display: flex;
+    flex-direction: column-reverse;
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: #0D0D0D .5rem .4rem .3rem;
+    text-align: justify;
+    width: 55rem;
+    
+    padding-bottom: 10rem;
+}
+
+#citacao p{
+    font-size: 2rem;
+    font-weight: 500;
+    /* text-align: ; */
+}
