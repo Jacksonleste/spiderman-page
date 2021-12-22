@@ -5,30 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/query.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="media/favicon.svg" type="image/x-icon">
     <title>Spiderman</title>
 </head>
 <body>
     <header>
-        <img src="media/Marvel logo.svg" alt="Logo Marvel">
-        <ul id="header-links">
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
-            <li>item4</li>
-        </ul>
+        <img  id="logo" src="media/Marvel logo.svg" alt="Logo Marvel">
+        <nav id="nav">
+            <button id="mobile-button" aria-label="Abrir Menu" aria-haspopup="true" aria-expanded="false">Menu
+                <span id="hamburger"></span>
+            </button>
+            <ul id="header-links">
+                <li><a href="#">Item1</a></li>
+                <li><a href="#">Item2</a></li>
+                <li><a href="#">Item3</a></li>
+                <li><a href="#">Item4</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <div id="head">
+        <section id="head">
             <img  id="image-head" src="media/spiderman-pendurado.jpg" alt="">
             <section id="citacao">
                 <p>Homem-aranha</p>
                 <blockquote>"Podemos não ganhar todas as batalhas, mas devemos dar sempre o nosso máximo."</blockquote>
             </section>
-        </div>
+        </section>
     </main>
+    <script src="script/script.js"></script>
 </body>
 </html>

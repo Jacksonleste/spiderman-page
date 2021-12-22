@@ -19,6 +19,11 @@ html{
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    height: 500rem;
+    overflow-x: hidden;
+}
+
 header{
     position: fixed;
     display: flex;
@@ -30,11 +35,15 @@ header{
     width: 100vw;
 }
 
-header img{
+#logo {
     height: 6rem;
 }
 
-#header-links{
+#mobile-button{
+    display: none;
+}
+
+#header-links {
     list-style: none;
     display: flex;
     font-size: 2.5rem;
@@ -42,25 +51,30 @@ header img{
     justify-content: space-between;
     align-items: center;
 
-    color: white;
-    /* background-color: aqua; */
-
-    
     min-width: 40rem;
     
     width: 40vw;
+
 }
 
-/* main{
-    padding-top: 6rem;
-} */
+#header-links a{
+    color: white;
+    opacity: 45%;
+}
+
+#header-links a:hover{
+    opacity: 100%;
+    transition: ease-in .1s;
+}
 
 #head{
     display: flex;
     background: url("https://github.com/Jacksonleste/spiderman-page/blob/main/media/new%20york%20hq4.png?raw=true");
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     height: 95vh;
+    min-height: 42rem;
     width: 100vw;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -68,7 +82,9 @@ header img{
 
 #image-head{
     /* height: 100vh;  */
-    height: 50vw;
+    height: 45vw;
+    min-height: 45rem;
+    max-height: 98vh;
     object-fit: contain;
 
 }
@@ -84,11 +100,13 @@ header img{
     text-align: justify;
     width: 55rem;
     
+    margin-right: 2rem;
     padding-bottom: 10rem;
 }
 
 #citacao p{
     font-size: 2rem;
     font-weight: 500;
-    /* text-align: ; */
 }
+
+
