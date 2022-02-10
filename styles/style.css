@@ -176,6 +176,7 @@ header{
 
 #cards .card.front.active{
     transform: rotateY(180deg);
+    visibility: hidden;
     z-index: 0;
 }
 
