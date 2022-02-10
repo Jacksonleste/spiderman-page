@@ -17,11 +17,29 @@
 html{
     font-size: 62.5%;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
+
 
 body{
     height: 500rem;
     overflow-x: hidden;
+}
+
+img{
+    -webkit-user-drag: none;
+}
+
+a{
+    color: var(--laranja);
+    font-weight: 600;
+}
+
+hr{
+    height: .1rem;
+    background-color: rgba(128, 128, 128, 0.5);
+    margin: 1rem 0 1rem 0;
+    border-radius: 2rem;
 }
 
 header{
@@ -33,7 +51,9 @@ header{
     align-items: center;
     height: 6rem;
     width: 100vw;
+    z-index: 999;
 }
+
 
 #logo {
     height: 6rem;
@@ -108,5 +128,105 @@ header{
     font-size: 2rem;
     font-weight: 500;
 }
+
+/*
+ EFEITO VIDRO
+
+    background-color: rgba(255, 255, 255, 0, 0.100);
+    backdrop-filter: blur(1.5rem);
+
+
+*/
+#fundo-card{
+    display: flex;
+    background: linear-gradient(180deg, var(--azul-principal), 70%, var(--vermelho-principal));
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    box-shadow: -1rem -1rem 1.5rem rgba(0, 0, 0, 0.5);
+    user-select: none;
+}
+
+#cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+
+
+.card img{
+    height: 70vh;
+    border-radius: 1.5rem 0 0 1.5rem;
+    perspective: 70rem;
+}
+
+#cards .card.front.active{
+    transform: rotateY(180deg);
+    z-index: 0;
+}
+
+#cards .card.back.active{
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+    z-index: 1;
+    visibility: visible;
+}
+
+#cards .back ul {
+    column-count: 2;
+    font-size: 1.5rem;
+}
+
+.card.front, .card.back{
+    position: absolute;
+    transition: 1s;
+}
+
+.front{
+    z-index: 1;
+}
+
+.back {
+    transform: rotateY(180deg);
+    visibility: hidden;
+}
+
+
+.card-text{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+
+    font-size: 2rem;
+    border-radius: 0 1.5rem 1.5rem 0;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.24);
+
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(1.5rem);
+}
+
+.card-text p{
+    padding: 1rem 1.5rem 0 1.5rem;
+}
+
+.card-text ul{
+    list-style: disc;
+    padding: 1rem 1.5rem 0 3rem;
+    /* display: flex; */
+    flex-direction: column;
+}
+
+
+
 
 
