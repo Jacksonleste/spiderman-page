@@ -16,12 +16,18 @@
 }
 
 
-
-@media(min-height: 1024px) and (max-width: 1150px), (max-height: 580px){
+@media (max-width: 1070px){
+    .card-text{
+        font-size: 1.5rem;
+    }
+}
+/* @media(min-height: 1024px) and (max-width: 1150px), (max-height: 580px){
     #citacao blockquote{
         width: 80vw;
     }
-}
+} */
+
+
 
 @media (max-width: 920px){
     #citacao{
@@ -126,6 +132,31 @@
     header{
         justify-content: space-between;
         padding: 0 2rem 0 2rem;
+    }
+
+    #cards .back ul {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 710px){
+
+    #background-card{
+        min-height: 100rem;
+    }
+    
+    .card{
+        flex-direction: column;
+    }
+
+    .card img{
+        border-radius: 1.5rem 1.5rem 0 0;
+    }
+
+    .card-text{
+        border-radius: 0 0 1.5rem 1.5rem;
+        width: 30rem;
+        min-height: 50rem;
     }
 }
 

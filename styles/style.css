@@ -96,6 +96,7 @@ header{
     height: 95vh;
     min-height: 42rem;
     width: 100vw;
+    max-height: 130rem;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -137,9 +138,10 @@ header{
 
 
 */
-#fundo-card{
+#background-card{
     display: flex;
     background: linear-gradient(180deg, var(--azul-principal), 70%, var(--vermelho-principal));
+    min-height: 60rem;
     height: 100vh;
     width: 100vw;
     align-items: center;
@@ -152,19 +154,21 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .card{
+    min-height: 30rem;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     overflow: hidden;
+    margin: 0 1rem;
 }
 
 
 
 .card img{
+    min-height: 45rem;
     height: 70vh;
     border-radius: 1.5rem 0 0 1.5rem;
     perspective: 70rem;
@@ -184,6 +188,7 @@ header{
 
 #cards .back ul {
     column-count: 2;
+    column-gap: 2rem;
     font-size: 1.5rem;
 }
 
@@ -203,6 +208,7 @@ header{
 
 
 .card-text{
+    min-height: 45rem;
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -222,8 +228,7 @@ header{
 .card-text ul{
     list-style: disc;
     padding: 1rem 1.5rem 0 3rem;
-    /* display: flex; */
-    flex-direction: column;
+
 }
 
 
