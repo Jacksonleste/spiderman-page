@@ -26,6 +26,10 @@ body{
     overflow-x: hidden;
 }
 
+::selection{
+    background-color: var(--azul-claro);
+}
+
 img{
     -webkit-user-drag: none;
 }
@@ -232,6 +236,50 @@ header{
 
 }
 
+#oldSpiderman{
+    background-image: url("../media/background-spiderman-1977.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 57rem;
+}
+
+main h1{
+    color: white;
+    font-size: 3.5em;
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    /* text-shadow: .1rem .3rem .5rem #00000073; */
+    background-color: #3088bf75;
+}
+
+#oldSpiderman > div{
+    display: flex;
+    padding: 2rem 3rem;
+    border-radius: 10rem 10rem 0 0;
+    /* background-color: white; */
+}
+
+#textOldSpider{
+    background-color: white;
+    height: 40rem;
+}
+
+#oldSpiderman p{
+    font-size: 1.8rem;
+    padding: .5rem 2rem;
+}
+
+#oldSpiderman figcaption{
+    background-color: rgba(255, 255, 255, 0.466);
+    padding: .5rem;
+}
+
+#oldSpiderman figure img{
+    height: 40rem;
+}
 
 
 
