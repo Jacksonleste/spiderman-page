@@ -22,8 +22,7 @@ html{
 
 
 body{
-    height: 500rem;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 ::selection{
@@ -359,19 +358,18 @@ main h1, h2{
     display: flex;
     justify-items: center;
     justify-content: space-between;
-    font-size: 5rem;
-    width: 60vw;
-    top: 60%;
     padding: 1rem 4rem;
+    width: 60vw;
+}
+
+#buttons button{
+    cursor: pointer; 
+    background-color: transparent;
+    font-size: 5rem;
     color: white;
 }
 
-#buttons .right, #buttons .left{
-    cursor: pointer;
-    
-}
-
-#buttons .right:hover, #buttons .left:hover{
+#buttons button:hover{
     transform: scale(1.2);
     color: var(--laranja);
 }
