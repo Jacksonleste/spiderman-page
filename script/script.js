@@ -1,6 +1,6 @@
 const btnMobile = document.querySelector('#mobile-button')
-let cards = document.querySelector("#cards")
-let linkCards = document.querySelectorAll('.linkCard')
+let cards = document.querySelector("#cards"),
+    linkCards = document.querySelectorAll('.linkCard')
 
 
 
