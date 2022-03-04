@@ -144,6 +144,7 @@ header{
 #background-card{
     display: flex;
     background: linear-gradient(180deg, var(--azul-principal), 70%, var(--vermelho-principal));
+    background-attachment: fixed;
     min-height: 60rem;
     height: 100vh;
     width: 100vw;

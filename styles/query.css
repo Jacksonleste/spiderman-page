@@ -87,7 +87,7 @@
 
 @media (max-width: 920px){
 
-    main h1{
+    main h1, h2{
         font-size: 3rem;
     }
 
@@ -101,6 +101,10 @@
 
     #oldSpiderman{
         min-height: 135rem;
+    }
+
+    .sliderContent > p{
+        font-size: 1.7rem;
     }
 }
 
@@ -225,13 +229,11 @@
         width: 30rem;
         min-height: 50rem;
     }
-}
 
-@media (max-width: 500px){
-
-    main h1{
-        font-size: 2.2rem;
+    .sliderContent img, #buttons, .sliderContent, #slideContainer{
+        width: 80vw;
     }
+
 }
 
 
@@ -262,12 +264,31 @@
         font-size: 1.5rem;
     }
 
+    #buttons button{
+        font-size: 4rem;
+    }
+
+}
+
+@media (max-width: 500px){
+
+    main h1, h2{
+        font-size: 2.2rem;
+    }
+
+    .sliderContent > p{
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 406px){
 
-    main h1{
+    main h1, h2{
         font-size: 2rem;
+    }
+
+    .sliderContent > p{
+        font-size: 1.3rem;
     }
 }
 
@@ -293,6 +314,11 @@
         min-width: auto;
         height: auto;
     }
+
+    .sliderContent img, #buttons, .sliderContent, #slideContainer{
+        width: 90vw;
+    }
+
 }
 
 @media (max-width: 300px){
