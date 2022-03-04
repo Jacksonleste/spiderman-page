@@ -23,7 +23,7 @@ html{
 
 body{
     height: 500rem;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 ::selection{
@@ -245,7 +245,7 @@ header{
     min-height: 57rem;
 }
 
-main h1{
+main h1, h2{
     color: white;
     font-size: 3.5em;
     margin: auto;
@@ -280,6 +280,102 @@ main h1{
 #oldSpiderman figure img{
     height: 40rem;
 }
+
+#principalSpiders{
+    min-height: 80vh;
+    background-image: url("../media/Hollywood_Sign.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    /* height: 100vh; */
+}
+
+#slideContainer{
+    width: 60vw;
+    margin: auto;
+    padding: 5rem 0;
+    overflow: hidden;
+}
+
+#carousel{
+    margin: auto;
+    display: flex;
+    /* align-items: center; */
+    width: max-content;
+}
+
+
+.sliderContent{
+    width: 60vw;
+    aspect-ratio: 16/9;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.sliderContent img{
+    width: 60vw;
+    object-fit: cover;
+}
+
+.sliderContent > p{
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.603);
+    
+    font-size: 2rem;
+    font-weight: 500;
+    text-indent: 1rem;
+    text-align: justify;
+
+    padding: 2rem;
+}
+
+.sliderContent a{
+    padding: 0 .5rem;
+    color: var(--azul-principal);
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.sliderContent a::before{
+    content: "\1F517";
+}
+
+.sliderContent::-webkit-scrollbar{
+    width: 1rem;
+}
+
+.sliderContent::-webkit-scrollbar-track{
+    background: black;
+}
+
+.sliderContent::-webkit-scrollbar-thumb{
+    background-color: var(--azul-principal);
+    border-radius: 1rem;
+    border: solid .3rem black
+}
+
+#buttons{
+    display: flex;
+    justify-items: center;
+    justify-content: space-between;
+    font-size: 5rem;
+    width: 60vw;
+    top: 60%;
+    padding: 1rem 4rem;
+    color: white;
+}
+
+#buttons .right, #buttons .left{
+    cursor: pointer;
+    
+}
+
+#buttons .right:hover, #buttons .left:hover{
+    transform: scale(1.2);
+    color: var(--laranja);
+}
+
 
 
 
