@@ -161,18 +161,19 @@ header{
 }
 
 .card{
-    min-height: 30rem;
+    min-height: 45rem;
     display: flex;
     justify-content: center;
     /* flex-wrap: wrap; */
     overflow: hidden;
-    margin: 0 1rem;
+    margin: auto;
 }
 
 
 
 .card img{
     min-height: 45rem;
+    object-fit: cover;
     height: 70vh;
     border-radius: 1.5rem 0 0 1.5rem;
     perspective: 70rem;
@@ -213,7 +214,7 @@ header{
 
 
 .card-text{
-    min-height: 45rem;
+    min-height: 40rem;
     height: 70vh;
     display: flex;
     flex-direction: column;
