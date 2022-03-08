@@ -294,7 +294,6 @@ main h1, h2{
 }
 
 #slideContainer{
-    width: 60vw;
     margin: auto;
     padding: 5rem 0;
     overflow: hidden;
@@ -309,13 +308,11 @@ main h1, h2{
 
 
 .sliderContent{
-    width: 60vw;
     aspect-ratio: 16/9;
     overflow-x: hidden;
     overflow-y: scroll;
 }
 .sliderContent img{
-    width: 60vw;
     object-fit: cover;
 }
 
@@ -361,7 +358,10 @@ main h1, h2{
     justify-items: center;
     justify-content: space-between;
     padding: 1rem 4rem;
-    width: 60vw;
+}
+
+#buttons, .sliderContent, #slideContainer, .sliderContent img{
+    width: 70vw;
 }
 
 #buttons button{

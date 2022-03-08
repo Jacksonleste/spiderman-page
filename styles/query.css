@@ -206,6 +206,10 @@
     #cards .back ul {
         font-size: 1.2rem;
     }
+
+    #buttons, .sliderContent, #slideContainer, .sliderContent img{
+        width: 85vw;
+    }
 }
 
 @media (max-width: 710px){
@@ -281,6 +285,10 @@
 
     .sliderContent > p{
         font-size: 1.5rem;
+    }
+
+    #buttons, .sliderContent, #slideContainer, .sliderContent img{
+        width: 95vw;
     }
 }
 
