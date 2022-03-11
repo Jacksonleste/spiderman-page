@@ -207,7 +207,7 @@
         font-size: 1.2rem;
     }
 
-    #buttons, .sliderContent, #slideContainer, .sliderContent img{
+    .buttons, .sliderContent, .slideContainer, .sliderContent img{
         width: 85vw;
     }
 }
@@ -234,7 +234,7 @@
         min-height: 50rem;
     }
 
-    .sliderContent img, #buttons, .sliderContent, #slideContainer{
+    .sliderContent img, .buttons, .sliderContent, .slideContainer{
         width: 80vw;
     }
 
@@ -268,7 +268,7 @@
         font-size: 1.5rem;
     }
 
-    #buttons button{
+    .buttons button{
         font-size: 4rem;
     }
 
@@ -287,7 +287,7 @@
         font-size: 1.5rem;
     }
 
-    #buttons, .sliderContent, #slideContainer, .sliderContent img{
+    .buttons, .sliderContent, .slideContainer, .sliderContent img{
         width: 95vw;
     }
 }
@@ -326,7 +326,7 @@
         height: auto;
     }
 
-    .sliderContent img, #buttons, .sliderContent, #slideContainer{
+    .sliderContent img, .buttons, .sliderContent, .slideContainer{
         width: 90vw;
     }
 

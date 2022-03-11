@@ -37,54 +37,70 @@ function dontFlip(){
 }
 
 const btnLeft = document.querySelector('#btnLeft'),
-      btnRight = document.querySelector('#btnRight')
+      btnRight = document.querySelector('#btnRight'),
+      btnLeft2 = document.querySelector('#btnLeft2'),
+      btnRight2 = document.querySelector('#btnRight2')
 
-let carousel = document.querySelector('#carousel'),
-    slides = document.querySelectorAll('.sliderContent'),
-    width = slides[0].getBoundingClientRect().width,
-    count = slides.length,
-    slideAtual = 1
+let firstSlide = {carousel : document.querySelector('.carousel.um'),
+                    slides : document.querySelectorAll('.sliderContent.um'),
+                    width : document.querySelectorAll('.sliderContent.um')[0].getBoundingClientRect().width,
+                    count : document.querySelectorAll('.sliderContent.um').length,
+                    currentSlide : 1}
+const firstSlideNext = ()=>{nextSlide(firstSlide)},
+        firstSlidePrev = ()=>{prevSlide(firstSlide)}
 
-function pass (){ carousel.style.transform = `translateX(${-width * slideAtual}px)`}
+let secondSlide = {carousel : document.querySelector('.carousel.dois'),
+                    slides : document.querySelectorAll('.sliderContent.dois'),
+                    width : document.querySelectorAll('.sliderContent.dois')[0].getBoundingClientRect().width,
+                    count : document.querySelectorAll('.sliderContent.dois').length,
+                    currentSlide : 1}
+const secondSlideNext = ()=>{nextSlide(secondSlide)},
+secondSlidePrev = ()=>{prevSlide(secondSlide)}
 
-pass()
+function pass (slideItems){ slideItems['carousel'].style.transform = `translateX(${-slideItems['width'] * slideItems['currentSlide']}px)`}
 
-function nextSlide(){
+function nextSlide(slideItems){
     if(event.keyCode == 39 || event.keyCode == undefined){
-        if(slideAtual == count-1) return
-        carousel.style.transition = 'transform ease-out .6s'
-        slideAtual ++
-        pass()
+        if(slideItems['currentSlide'] == slideItems['count']-1){ 
+            return
+        }else{
+                slideItems['carousel'].style.transition = 'transform ease-out .6s'
+                slideItems['currentSlide'] ++
+                pass(slideItems)
+            }
     }
 }
 
-function prevSlide(){
+function prevSlide(slideItems){
     if(event.keyCode == 37 || event.keyCode == undefined){
-        if(slideAtual == 0) return
-        carousel.style.transition = 'transform ease-out .6s'
-        slideAtual --
-        pass()
+        if(slideItems['currentSlide'] == 0) return
+        slideItems['carousel'].style.transition = 'transform ease-out .6s'
+        slideItems['currentSlide'] --
+        pass(slideItems)
     }
 }
 
-function lastSlides(){
-    if(slides[slideAtual].id == 'firstCopy'){
-        carousel.style.transition = 'transform 0s'
-        slideAtual = 1
-        pass()
-    }else if(slides[slideAtual].id == 'lastCopy'){
-        carousel.style.transition = 'transform 0s'
-        slideAtual = count-2
-        pass()
+function lastSlides(slideItems){
+    if(slideItems['slides'][slideItems['currentSlide']].id == 'firstCopy'){
+        slideItems['carousel'].style.transition = 'transform 0s'
+        slideItems['currentSlide'] = 1
+        pass(slideItems)
+    }else if(slideItems['slides'][slideItems['currentSlide']].id == 'lastCopy'){
+        slideItems['carousel'].style.transition = 'transform 0s'
+        slideItems['currentSlide'] = slideItems['count']-2
+        pass(slideItems)
     }
 }
 
-function resizeSlide(){
-    width = slides[0].getBoundingClientRect().width
-    pass()
+function resizeSlide(slideItems){
+    slideItems['width'] = document.querySelectorAll('.sliderContent')[0].getBoundingClientRect().width
+    pass(slideItems)
 }
+
 /* ----------------------- */
 
+pass(firstSlide)
+pass(secondSlide)
 
 btnMobile.addEventListener('click', toggleMenu)
 
@@ -92,18 +108,34 @@ linkCards.forEach((link)=>{
     link.addEventListener('click', dontFlip)
 })
 
-carousel.addEventListener('mouseenter', ()=>{
-    document.addEventListener('keydown', nextSlide)
-    document.addEventListener('keydown', prevSlide)
+firstSlide['carousel'].addEventListener('mouseenter', ()=>{
+    document.addEventListener('keyup', firstSlideNext)
+    document.addEventListener('keyup', firstSlidePrev)
 })
 
-carousel.addEventListener('mouseleave', ()=>{
-    document.removeEventListener('keydown', nextSlide)
-    document.removeEventListener('keydown', prevSlide)
+firstSlide['carousel'].addEventListener('mouseleave', ()=>{
+    document.removeEventListener('keyup', firstSlideNext)
+    document.removeEventListener('keyup', firstSlidePrev)
 })
 
-btnRight.addEventListener('click', nextSlide)
-btnLeft.addEventListener('click', prevSlide)
+secondSlide['carousel'].addEventListener('mouseenter', ()=>{
+    document.addEventListener('keyup', secondSlideNext)
+    document.addEventListener('keyup', secondSlidePrev)
+})
 
-carousel.addEventListener('transitionend', lastSlides)
-window.addEventListener('resize', resizeSlide)
+secondSlide['carousel'].addEventListener('mouseleave', ()=>{
+    document.removeEventListener('keyup', secondSlideNext)
+    document.removeEventListener('keyup', secondSlidePrev)
+})
+
+btnRight.addEventListener('click', firstSlideNext)
+btnRight2.addEventListener('click', secondSlideNext)
+
+btnLeft.addEventListener('click', firstSlidePrev)
+btnLeft2.addEventListener('click', secondSlidePrev)
+
+firstSlide['carousel'].addEventListener('transitionend', ()=>{lastSlides(firstSlide)})
+secondSlide['carousel'].addEventListener('transitionend', ()=>{lastSlides(secondSlide)})
+
+window.addEventListener('resize', ()=>{resizeSlide(firstSlide)})
+window.addEventListener('resize', ()=>{resizeSlide(secondSlide)})
