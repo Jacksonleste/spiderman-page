@@ -103,7 +103,7 @@
         min-height: 135rem;
     }
 
-    .sliderContent > p{
+    .sliderContent > p, #references p, footer{
         font-size: 1.7rem;
     }
 }
@@ -275,6 +275,11 @@
     #header-links{
         width: 100vw;
     }
+
+    footer div{
+        width: 100%;
+        padding: 2rem 0;
+    }
 }
 
 @media (max-width: 500px){
@@ -283,7 +288,7 @@
         font-size: 2.2rem;
     }
 
-    .sliderContent > p{
+    .sliderContent > p, #references p, footer{
         font-size: 1.5rem;
     }
 
@@ -298,7 +303,7 @@
         font-size: 2rem;
     }
 
-    .sliderContent > p{
+    .sliderContent > p, #references p, footer{
         font-size: 1.3rem;
     }
 }

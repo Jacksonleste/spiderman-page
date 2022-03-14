@@ -291,7 +291,7 @@ main h1, h2{
     background-image: url("../media/animacoes_background.jpg");
 }
 
-#principalSpiders, #animacoes{
+#principalSpiders, #animacoes, #references{
     min-height: 80vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -335,14 +335,14 @@ main h1, h2{
     padding: 2rem;
 }
 
-.sliderContent a{
+.sliderContent a, #references a{
     padding: 0 .5rem;
     color: var(--azul-principal);
     background-color: white;
     border-radius: 1rem;
 }
 
-.sliderContent a::before{
+.sliderContent a::before, #references a::before{
     content: "\1F517";
 }
 
@@ -383,6 +383,49 @@ main h1, h2{
     color: var(--laranja);
 }
 
+#references {
+    background-image: url("../media/spiderman-college.jpg");
+    padding-bottom: 3rem;
+}
+
+#references p{
+        padding: 2rem;
+        margin: 2rem;
+        border-radius: 3rem;
+        backdrop-filter: blur(20px);
+        background-color: rgba(255, 255, 255, 0.603);
+    
+        font-size: 2rem;
+        font-weight: 500;
+        text-indent: 1rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    
+#references p:hover{
+    box-shadow: .5rem .5rem 1.5rem rgba(0, 0, 0, 0.349);
+    transform: scale(1.01);
+
+}
+
+footer{
+        background: var(--azul-principal);
+        display: flex;
+        flex-wrap: wrap;
+
+        padding: 2rem;
+        backdrop-filter: blur(20px);    
+        color: white;
+        font-size: 2rem;
+        font-weight: 500;
+        text-indent: 1rem;
+        text-align: center;
+        word-wrap: break-word;   
+}
+
+footer div{
+    width: 50%;
+}
 
 
 
