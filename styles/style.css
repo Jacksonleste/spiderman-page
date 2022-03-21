@@ -215,7 +215,6 @@ header{
 
 .card-text{
     min-height: 40rem;
-    height: 70vh;
     display: flex;
     flex-direction: column;
 
