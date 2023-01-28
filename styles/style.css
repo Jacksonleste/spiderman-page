@@ -74,7 +74,7 @@ header{
     justify-content: space-between;
     align-items: center;
 
-    min-width: 40rem;
+    min-width: 80rem;
     
     width: 40vw;
 
@@ -87,7 +87,8 @@ header{
 
 #header-links a:hover{
     opacity: 100%;
-    transition: ease-in .1s;
+    transition: ease-in .15s;
+    border-bottom: solid var(--azul-claro) .5rem;
 }
 
 #head{
@@ -96,7 +97,7 @@ header{
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 95vh;
+    height: 100vh;
     min-height: 42rem;
     width: 100vw;
     max-height: 130rem;
@@ -110,8 +111,14 @@ header{
     min-height: 45rem;
     max-height: 98vh;
     object-fit: contain;
-
+    animation: example 5s 1;
 }
+
+@keyframes example {
+    0%   {transform: translateY(-1000px)}
+    25%  {transform: translateY(0px)}
+    35%  {transform: translateY(-30px)}
+  }
 
 #citacao{
     padding-left: 5rem;
@@ -241,7 +248,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: 100vh; 
     min-height: 57rem;
 }
 
